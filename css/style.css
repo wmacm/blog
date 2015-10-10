@@ -1464,8 +1464,8 @@ a {
 .article-entry pre,
 .article-entry .highlight {
   background: #272822;
-  margin: 10px 0;
-  padding: 10px 10px;
+  margin: 8px 0;
+  padding: 8px 8px;
   overflow: auto;
   color: #4c4c4c;
   line-height: 22.400000000000002px;
@@ -1532,8 +1532,8 @@ a {
   text-shadow: none;
 }
 .article-entry .highlight .line {
-  font-size: 15px;
-  height: 15px;
+  font-size: 13px;
+  height: 13px;
 }
 .article-entry .gist {
   margin: 0 -20px;
