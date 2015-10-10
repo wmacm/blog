@@ -83,11 +83,75 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>```java</p>
+<ul>
+<li><p>(void)viewDidLoad {<br>  [super viewDidLoad];<br>  // Do any additional setup after loading the view.</p>
+<p>  self.title = @”新建提醒”;</p>
+<p>  if (_event == nil) {</p>
+<pre><code>isEdit = <span class="literal">false</span>;
+_event = [[EventEntity alloc] init];
+<span class="keyword">if</span> (_tempDate == <span class="literal">nil</span>) {
+    _tempDate = [<span class="built_in">NSDate</span> date];
+}
+<span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, _tempDate);
+_event<span class="variable">.startDate</span> = _tempDate;
+_event<span class="variable">.endDate</span> = _tempDate;
+<span class="built_in">NSString</span> *str = [<span class="keyword">self</span> dateToString:_tempDate];
+[_startButton setTitle:str forState:<span class="built_in">UIControlStateNormal</span>];
+[_stopButton setTitle:str forState:<span class="built_in">UIControlStateNormal</span>];
+
+_event<span class="variable">.title</span> = <span class="string">@""</span>;
+</code></pre><p>  }<br>  else {</p>
+<pre><code>isEdit = <span class="literal">true</span>;
+_textView.text = _event.title;
+
+NSString *imgDir = [NSString <span class="string">stringWithFormat:</span>@<span class="string">"%@/Library/EventImgs/%@"</span>, NSHomeDirectory(), _event.imgName];
+[_photoButton <span class="string">setImage:</span>[UIImage <span class="string">imageWithContentsOfFile:</span>imgDir] <span class="string">forState:</span>UIControlStateNormal];
+[_playButton <span class="string">setTitle:</span>[NSString <span class="string">stringWithFormat:</span>@<span class="string">"%@.caf"</span>, _event.recodName] <span class="string">forState:</span>UIControlStateNormal];
+[_startButton <span class="string">setTitle:</span>[self <span class="string">dateToString:</span>_event.startDate] <span class="string">forState:</span>UIControlStateNormal];
+[_stopButton <span class="string">setTitle:</span>[self <span class="string">dateToString:</span>_event.endDate] <span class="string">forState:</span>UIControlStateNormal];
+[self <span class="string">selectEventAlertTimeType:</span>_event.alertTimeType];
+[self <span class="string">selectEventRepeatType:</span>_event.repeatType <span class="string">andStopRepeatDate:</span>_event.stopRepeatDate];
+</code></pre><p>  }</p>
+</li>
+</ul>
+<pre><code><span class="keyword">if</span> (_event.imgName == nil) {
+    _changeImageButton.hidden = YES;
+    _deleteImageButton.hidden = YES;
+}
+<span class="keyword">else</span>
+    _addImageButton.hidden = YES;
+
+_textView.layer.borderWidth = <span class="number">0.5</span>;
+_textView.layer.borderColor = [UIColor colorWithWhite:<span class="number">0.8</span> alpha:<span class="number">1</span>].CGColor;
+_textView.layer.cornerRadius = <span class="number">2</span>;
+
+_photoBgView.layer.borderWidth = <span class="number">0.5</span>;
+_photoBgView.layer.borderColor = [UIColor colorWithWhite:<span class="number">0.8</span> alpha:<span class="number">1</span>].CGColor;
+_photoBgView.layer.cornerRadius = <span class="number">2</span>;
+
+_soundBgView.layer.borderWidth = <span class="number">0.5</span>;
+_soundBgView.layer.borderColor = [UIColor colorWithWhite:<span class="number">0.8</span> alpha:<span class="number">1</span>].CGColor;
+_soundBgView.layer.cornerRadius = <span class="number">2</span>;
+
+_timeBgView.layer.borderWidth = <span class="number">0.5</span>;
+_timeBgView.layer.borderColor = [UIColor colorWithWhite:<span class="number">0.8</span> alpha:<span class="number">1</span>].CGColor;
+_timeBgView.layer.cornerRadius = <span class="number">2</span>;
+
+_modelBgView.layer.borderWidth = <span class="number">0.5</span>;
+_modelBgView.layer.borderColor = [UIColor colorWithWhite:<span class="number">0.8</span> alpha:<span class="number">1</span>].CGColor;
+_modelBgView.layer.cornerRadius = <span class="number">2</span>;
+
+[self hiddenTextFieldInit];
+
+_photoButton.imageView.contentMode = UIViewContentModeScaleToFill;
+</code></pre><p>}</p>
+<p>`</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/09/tit/" data-id="cifjhgdmb0001wwu2mvtr3tyv" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/09/tit/" data-id="cifkivjla000107u28yv2kuy5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -132,7 +196,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/09/hello-world/" data-id="cifjhgdll0000wwu2isha6le6" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/09/hello-world/" data-id="cifkivjki000007u2tiee4qae" class="article-share-link">Share</a>
       
       
     </footer>
