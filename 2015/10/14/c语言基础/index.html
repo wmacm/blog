@@ -1,0 +1,250 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>C语言基础知识点 | Kingman&#39;s blog</title>
+  <meta name="author" content="Kingmon">
+  
+  <meta name="description" content="描述">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="C语言基础知识点"/>
+  <meta property="og:site_name" content="Kingman&#39;s blog"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Kingman&#39;s blog" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <meta name="wumiiVerification" content="fb50a101-84fe-4ca2-91a7-ae8cf792978b" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+</head>
+
+<body>
+  <header id="header" class="inner"><div class= "header-content">
+	<div class = "alignleft col-one">
+		
+			<img src = "http://tp2.sinaimg.cn/2316860373/180/5672829650/1">
+		
+		<div class="header-div">
+		    <h1><a href="/">Kingman&#39;s blog</a></h1>
+		    <h2><a href="/">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的屌丝…</a></h2>
+		</div>
+	</div>
+	<div class = "alignright col-two">
+		
+			<img src = "/assets/img/avatar/hello.jpg">
+		
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+<div class= "header-nav">
+	<div id="main-nav" class="alignleft">
+	    
+	      <a href="/">首页</a>
+	    
+	      <a href="/categories/iOS学习">iOS学习</a>
+	    
+	      <a href="/gallery">图集</a>
+	    
+	      <a href="/archives">归档</a>
+	    
+	</div>
+	<div id="sub-nav" class="alignright">
+	    
+	      <a href="/customization">自定义</a>
+	    
+	      <a href="/resume">个人简历</a>
+	    
+	</div>
+	<div class="clearfix"></div>
+</div>
+</header>
+  
+      <div id="content" class="inner">
+  		<div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+        <div class="icon"></div>
+        <time datetime="2015-10-14T14:02:58.000Z"><a href="/2015/10/14/c语言基础/">2015-10-14</a></time>
+        
+  
+    <h1 class="title">C语言基础知识点</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <div id="toc" class="toc-article">
+	<div class="toc-title">目录</div>
+	<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、C语言概述"><span class="toc-text">一、C语言概述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、main()函数"><span class="toc-text">1、main()函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、printf()函数"><span class="toc-text">2、printf()函数</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、程序编译运行"><span class="toc-text">3、程序编译运行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、C语言编程风格"><span class="toc-text">4、C语言编程风格</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#4-1、注释"><span class="toc-text">4.1、注释</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-2、预编译指令"><span class="toc-text">4.2、预编译指令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4-3、代码缩进"><span class="toc-text">4.3、代码缩进</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、数据类型、变量、运算符"><span class="toc-text">二、数据类型、变量、运算符</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、程序结构"><span class="toc-text">三、程序结构</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、顺序结构"><span class="toc-text">1、顺序结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、选择结构"><span class="toc-text">2、选择结构</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、循环结构"><span class="toc-text">3、循环结构</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#（1）for_循环"><span class="toc-text">（1）for 循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（2）while_循环"><span class="toc-text">（2）while 循环</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#（3）do_while_循环"><span class="toc-text">（3）do while 循环</span></a></li></ol></li></ol></li></ol>
+</div>
+      
+        <p>可以说<code>Objective-c语言</code>是<code>C语言</code>的扩展，所以学习c语言对后期学习oc有着很大的帮助<br>以下是c语言的主要知识点<em>（第一章会细一些，后面细节还要多看书）</em></p>
+<blockquote>
+<p>*目录是我随便划分的<br><a id="more"></a></p>
+</blockquote>
+<h2 id="一、C语言概述">一、C语言概述</h2><p>最初的编程语言是机器语言、汇编语言，机器语言和汇编语言都是低级语言，与低级语言相对的是高级语言，高级语言更加类似于人类的自然语言，常见的高级语言有：<code>C、C++、C#、Java、Basic、Python</code>等。</p>
+<p>C语言是<code>过程语言</code>，高级语言最初都是过程语言，过程语言是沿着<code>“输入数据-&gt;处理数据-&gt;输出数据”</code>这条主线经行的。如今<code>面向对象语言</code>成为了主流，例如C++、C#、Java以及Objective-c都是<code>面向对象语言</code>。</p>
+<p>C语言诞生已经好几十年，如今仍被广泛使用，C语言是程序学习编程的首选，C语言的<code>运行效率</code>基本是最快的，还有C语言是跨平台的语言，移植性好。（<code>Objective-c语言不是跨平台语言，只能在iOS及OSX系统下运行</code>）</p>
+<p>因为C语言是<code>过程语言</code>，所以C语言程序由一个或多个过程构成，每一个过程可以称为一个<code>函数</code>。每一个程序必须至少包含一个名称为<code>main()</code>的函数。</p>
+<h3 id="1、main()函数">1、main()函数</h3><p>这是函数的入口，程序执行时，首先执行<code>main()</code>函数中的代码。这个名字不能改动，不能写成Main，因为C语言是一种<code>区分大小写</code>的语言（HTML不是区分大小写的语言）。main()函数中可以调用其他函数。</p>
+<p>一个main()函数的结构如下所示：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="comment">//函数内代码</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>int为函数的<code>返回值</code>，main为<code>函数名</code>，小括号里的为<code>参数列表</code>，main()函数的参数列表可以为空，也可以包含参数列表，如下（暂时不用在意它的区别）：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">const</span> <span class="keyword">char</span> * argv[])</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="comment">//函数内代码</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>花括号内位<code>函数体</code>，最后需要return语句，返回0表示main()函数执行完毕正常退出。</p>
+<h3 id="2、printf()函数">2、printf()函数</h3><p><code>printf()</code>函数是使用广泛的函数，用于将内容发送到标准输出设备上并打印的函数，大多数情况下标准输出设备为显示器。</p>
+<p>第一个C语言程序：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span>  </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">"Hello, World!"</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面代码运行会在控制台打印出一行字符串：<code>Hello, World!</code>。程序员都是从“Hello, World!”开始的。</p>
+<h3 id="3、程序编译运行">3、程序编译运行</h3><p>程序源代码经过<code>解释</code>和<code>编译</code>为<code>目标程序</code>、<code>可执行程序</code>后才能运行，具体的解释、编译不多述。</p>
+<h3 id="4、C语言编程风格">4、C语言编程风格</h3><h4 id="4-1、注释">4.1、注释</h4><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单行注释内容，不能回车换行</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight gherkin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/<span class="keyword">*</span>多行注释内容</span><br><span class="line">  可以回车换行<span class="keyword">*</span>/</span><br></pre></td></tr></table></figure>
+<h4 id="4-2、预编译指令">4.2、预编译指令</h4><p><code>#include &lt;头文件&gt;</code>程序在编译之前首先将列出的头文件包含到当前源代码中再经行编译。例如，使用printf()函数，要包含stdio.h文件。后面还要说其他的<code>预编译指令</code>。</p>
+<h4 id="4-3、代码缩进">4.3、代码缩进</h4><p>代码缩进是程序看起来清晰有层次，代码缩进<code>十分必要</code>。大多数语言都是缩进<code>4个空格</code>。</p>
+<blockquote>
+<p>*编写程序时，除了字符串内容，尽量用英文输入法输入，以免引起错误。</p>
+</blockquote>
+<h2 id="二、数据类型、变量、运算符">二、数据类型、变量、运算符</h2><h2 id="三、程序结构">三、程序结构</h2><h3 id="1、顺序结构">1、顺序结构</h3><p>ni</p>
+<h3 id="2、选择结构">2、选择结构</h3><p>2</p>
+<h3 id="3、循环结构">3、循环结构</h3><h4 id="（1）for_循环">（1）for 循环</h4><h4 id="（2）while_循环">（2）while 循环</h4><h4 id="（3）do_while_循环">（3）do while 循环</h4>
+      
+    </div>
+    <footer>
+<!--        -->
+        
+  
+  <div class="categories">
+    <a href="/categories/iOS学习/">iOS学习</a>
+  </div>
+
+        
+  
+  <div class="tags">
+    <a href="/tags/C语言/">C语言</a>, <a href="/tags/iOS/">iOS</a>, <a href="/tags/iOS学习/">iOS学习</a>
+  </div>
+
+        
+  <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到人人网" href="#" class="bds_renren" data-cmd="renren"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a></div>
+  <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!--        -->
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+<!--   <h1 class="title">留言</h1> -->
+
+
+    <!-- 多说评论框 start -->
+<div class="ds-thread" data-thread-key="2015/10/14/c语言基础/" data-title="C语言基础知识点" data-url="http://wmacm.github.io/2015/10/14/c语言基础/"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"pengloo53"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+
+  
+</section>
+
+
+
+</div></div>
+  		<aside id="sidebar" class="alignright">
+  
+<div class="widget tag">
+  <h3 class="title">分类</h3>
+<!--   
+	
+		<li><a href="/categories/iOS学习/">iOS学习</a><small>1</small></li>
+	
+  
+	
+		<li><a href="/categories/一级目录/">一级目录</a><small>1</small></li>
+	
+   -->
+     <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS学习/">iOS学习</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/一级目录/">一级目录</a><span class="category-list-count">1</span></li></ul> 
+</div>
+ 
+
+
+  
+  <div class="widget tag">
+    <h3 class="title">归档</h3>
+	<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">2015年10月</a><span class="archive-list-count">3</span></li></ul>
+  </div>
+
+
+  
+<div class="widget tagcloud">
+  <h3 class="title">标签云</h3>
+  <div class="entry">
+    <a href="/tags/C语言/" style="font-size: 10px;">C语言</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iOS学习/" style="font-size: 10px;">iOS学习</a>
+  </div>
+</div>
+
+
+  
+  <div class="widget">
+    <h3 class="title">我的微博</h3>
+      <ul class="weibo">
+	<iframe width="100%" height="800" class="share_self"  frameborder="0" scrolling="no" src="http://widget.weibo.com/weiboshow/index.php?language=&amp;width=0&amp;height=800&amp;fansRow=1&amp;ptype=1&amp;speed=0&amp;skin=1&amp;isTitle=0&amp;noborder=0&amp;isWeibo=1&amp;isFans=0&amp;uid=1934606495&amp;verifier=a6769878&amp;dpc=1"></iframe>
+      </ul>
+  </div>
+
+</aside>
+           <div class="clearfix"></div>
+      </div>
+  	
+   <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015 Kingmon
+  
+</div>
+<div class="alignright">
+	<a href="https://github.com/pengloo53/light-ch">Hexo theme</a>
+</div>
+<div class="clearfix"></div></footer>
+  <script src="http://libs.baidu.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+	<script>
+	var _hmt = _hmt || [];
+	(function() {
+	  var hm = document.createElement("script");
+	  hm.src = "//hm.baidu.com/hm.js?dce613887849d114b64d37be797bf201";
+	  var s = document.getElementsByTagName("script")[0]; 
+	  s.parentNode.insertBefore(hm, s);
+	})();
+	</script>
+
+<div id="toTop">
+	<a href="#">▲</a>
+	<a href="#footer">▼</a>
+</div>
+<!--  -->
+
+
+</body>
+</html>
